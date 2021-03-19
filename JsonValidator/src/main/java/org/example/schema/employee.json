@@ -1,0 +1,41 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Employee Schema",
+  "description": "schema for employee object",
+  "type": "object",
+  "required": [
+    "email",
+    "first_name",
+    "last_name"
+  ],
+  "properties": {
+    "email": {
+      "type": "string",
+      "$ref": "#/definitions/non-empty-string",
+      "description": "The email of employee.",
+      "format": "email"
+    },
+    "first_name": {
+      "type": "string",
+      "description": "first name of the employee."
+    },
+    "last_name": {
+      "type": "string",
+      "description": "last name of the employee."
+    },
+    "age": {
+      "type": "string",
+      "description": "age of the employee."
+    },
+    "gender": {
+      "type": "string",
+      "description": "gender of the employee."
+    }
+  },
+  "definitions": {
+    "non-empty-string": {
+      "type": "string",
+      "minLength": 1
+    }
+  }
+}
